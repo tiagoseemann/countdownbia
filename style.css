@@ -1,0 +1,77 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #ff0000; /* Fundo vermelho */
+    color: #fff;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    text-align: center; /* Centraliza o texto */
+    flex-direction: column; /* Organiza o conteúdo verticalmente */
+    padding: 10px; /* Adiciona espaçamento nas laterais */
+}
+
+.countdown-container {
+    max-width: 800px; /* Limita a largura máxima para evitar excesso */
+    width: 100%; /* Ocupa toda a largura disponível */
+    text-align: center;
+}
+
+h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+#countdown {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px; /* Espaçamento maior para desktops */
+    margin-top: 20px;
+}
+
+#countdown div {
+    flex: 1; /* Cada bloco ocupa espaço proporcional */
+    font-size: 2.5em;
+    color: #00ff00; /* Números em verde */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+
+#countdown span {
+    font-size: 3em; /* Destaque para os números */
+    font-weight: bold;
+    display: block; /* Força os números para linha separada */
+}
+
+#countdown div::after {
+    content: attr(data-label); /* Adiciona o rótulo (Dias, Horas, etc.) */
+    font-size: 0.8em;
+    color: #fff;
+    margin-top: 5px;
+}
+.suggestion {
+    margin-top: 20px;
+    font-size: 1.2em;
+    color: #fff;
+    text-align: center;
+}
+
+
+/* Ajustes específicos para dispositivos móveis */
+@media (max-width: 600px) {
+    #countdown {
+        flex-wrap: wrap; /* Permite quebra de linha */
+        gap: 15px; /* Espaçamento menor em telas pequenas */
+    }
+
+    #countdown div {
+        font-size: 2em; /* Reduz o tamanho dos números */
+        flex: 1 1 100px; /* Ajusta largura flexível */
+    }
+
+    #countdown span {
+        font-size: 2.5em; /* Reduz o tamanho dos números */
+    }
+}
+
