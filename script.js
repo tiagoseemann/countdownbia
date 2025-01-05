@@ -6,7 +6,7 @@ const countdownElement = {
 };
 
 // Corrected target date: 04/01/2025 at 17:00 (GMT-3)
-const targetDate = new Date("2025-01-04T17:00:00-03:00").getTime();
+const targetDate = new Date("2025-01-11T23:00:00-03:00").getTime();
 
 function updateCountdown() {
     const now = new Date().getTime();
@@ -30,4 +30,5 @@ function updateCountdown() {
 
 setInterval(updateCountdown, 1000);
 updateCountdown();
+
 
